@@ -1,4 +1,5 @@
 import Parent from "./components/Parent";
+import UseStateObj from "./components/UseStateObj";
 import { CountProvider } from "./context/CountContext";
 import HooksWithArray from "./useState/HooksWithArray";
 import UseStateComponent from "./useState/UseStateComponent";
@@ -21,7 +22,8 @@ function App() {
       </CountProvider> */}
 
       {/* <UseStateComponent /> */}
-      <HooksWithArray />
+      {/* <HooksWithArray /> */}
+      <UseStateObj />
     </div>
   );
 }
