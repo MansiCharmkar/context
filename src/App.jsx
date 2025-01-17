@@ -22,8 +22,8 @@ function App() {
       </CountProvider> */}
 
       {/* <UseStateComponent /> */}
-      {/* <HooksWithArray /> */}
-      <UseStateObj />
+      <HooksWithArray />
+      {/* <UseStateObj /> */}
     </div>
   );
 }

@@ -18,25 +18,36 @@ const BioData = [
   },
   {
     id: 4,
-    name: "shalni",
+    name: "Shalni",
     age: 21,
   },
 ];
 
 function HooksWithArray() {
-  const [data, setData] = useState(BioData);
+  const [elm, setElm] = useState(BioData);
 
-  function clearData() {
-    setData([]);
-  }
+  const clearData = () => {
+    setElm([]);
+  };
+
+  const handleRemoveData = (id) => {
+    const newArrayElm = elm.filter((curElm) => {
+      return curElm.id != id;
+    });
+    setElm(newArrayElm);
+  };
+
   return (
     <>
-      {data.map((curData) => (
-        <p key={curData}>
-          Name : {curData.name} & Age : {curData.age}
-        </p>
-      ))}
-      <button onClick={clearData}>Clear</button>
+      {elm.map((curElm) => {
+        return (
+          <h3 key={curElm}>
+            Name : {curElm.name} & Age : {curElm.age}
+            <button onClick={() => handleRemoveData(curElm.id)}>remove</button>
+          </h3>
+        );
+      })}
+      <button onClick={clearData}>ClearData</button>
     </>
   );
 }
