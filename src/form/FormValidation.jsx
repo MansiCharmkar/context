@@ -8,12 +8,16 @@ function FormValidation() {
 
   const handleSubmitData = (e) => {
     e.preventDefault();
-    const newEntry = { name: name, email: email, password: password };
-    setNewData(...newData, newEntry);
+    if (name && email && password) {
+      const newEntry = { name: name, email: email, password: password };
+      setNewData(...newData, newEntry);
 
-    setName("");
-    setEmail("");
-    setPassword("");
+      setName("");
+      setEmail("");
+      setPassword("");
+    } else {
+      alert("😮Opps! Please fill the remaining input field.");
+    }
   };
 
   return (
