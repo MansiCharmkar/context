@@ -3,6 +3,7 @@ import UseStateObj from "./components/UseStateObj";
 import { CountProvider } from "./context/CountContext";
 import FormValidation from "./form/FormValidation";
 import UseEffect1 from "./useEffect/UseEffect1";
+import UseEffect2 from "./useEffect/UseEffect2";
 import HooksWithArray from "./useState/HooksWithArray";
 import ShortCirVal from "./useState/ShortCirVal";
 import UseStateComponent from "./useState/UseStateComponent";
@@ -29,7 +30,8 @@ function App() {
       {/* <UseStateObj /> */}
       {/* <ShortCirVal /> */}
       {/* <FormValidation /> */}
-      <UseEffect1 />
+      {/* <UseEffect1 /> */}
+      <UseEffect2 />
     </div>
   );
 }

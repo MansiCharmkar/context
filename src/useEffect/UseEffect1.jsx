@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 function UseEffect1() {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    document.title = `chats ${count}`;
+    count >= 1
+      ? (document.title = `chats (${count})`)
+      : (document.title = `chat`);
   }, [count]);
   console.log("i am outer useEffect function");
   const IncreamentBy1 = () => {
